@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.zoe:json-lib:20160614">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/zoe/json-lib/20160614/json-lib-20160614.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/zoe/json-lib/20160614/json-lib-20160614-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/zoe/json-lib/20160614/json-lib-20160614-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/antin-es/antin-es.iml" filepath="$PROJECT_DIR$/antin-es/antin-es.iml" />
+      <module fileurl="file://$PROJECT_DIR$/antin-hadoop.iml" filepath="$PROJECT_DIR$/antin-hadoop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/antin-hbase/antin-hbase.iml" filepath="$PROJECT_DIR$/antin-hbase/antin-hbase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/antin-hdfs/antin-hdfs.iml" filepath="$PROJECT_DIR$/antin-hdfs/antin-hdfs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/antin-mr/antin-mr.iml" filepath="$PROJECT_DIR$/antin-mr/antin-mr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/antin-storm/antin-storm.iml" filepath="$PROJECT_DIR$/antin-storm/antin-storm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/antin-work/antin-work.iml" filepath="$PROJECT_DIR$/antin-work/antin-work.iml" />
+    </modules>
+  </component>
+</project>
