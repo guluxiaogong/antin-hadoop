@@ -62,6 +62,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="antin-es" target="1.8" />
+      <module name="antin-hadoop" target="1.8" />
       <module name="antin-hbase" target="1.8" />
       <module name="antin-hdfs" target="1.8" />
       <module name="antin-mr" target="1.8" />
