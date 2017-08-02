@@ -1,4 +1,4 @@
-package com.antin.hdfs.demo;
+package com.antin.hdfs;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FSDataInputStream;
@@ -14,12 +14,12 @@ import java.net.URI;
  * Created by Administrator on 2017/3/16.
  */
 public class HdfsHelper {
+    //private static String HDFS_PATH = "hdfs://192.168.2.88:9000/";
+    private static final String HDFS_PATH = "hdfs://zoe-cluster/";
+    private static final String HDFS_USER = "jcj";
     private static Logger log = Logger.getLogger(HdfsHelper.class);
     private static FileSystem fileSystem;
     private static Configuration conf;
-
-    private static String HDFS_PATH = "hdfs://192.168.2.88:9000/";
-    //private static String HDFS_PATH = "hdfs://cluster1/";
 
     static {
         conf = new Configuration();
@@ -42,12 +42,12 @@ public class HdfsHelper {
         //mkdir("/hdfs_test_path");
 
         // 向文件中写内容，如果文件不存在会创建
-        write("/hdfs_test_path/testWrite", "write success!", false);
+        write("/user/jcj/temp/test/testWrite", "write success!\n", true);
 
         // 读取文件内容
         // log.info(read("/hdfs_test_path/testWrite"));
 
-        upload("D:\\ZHS\\other\\readme.txt","/jcj/");
+        //upload("D:\\ZHS\\other\\readme.txt", "/jcj/");
 
         //列出所有文件
         //listFile("/");
@@ -82,7 +82,7 @@ public class HdfsHelper {
      */
     public static void getFileSystem() throws Exception {
         //fileSystem = FileSystem.get(conf);
-        fileSystem = FileSystem.get(new URI(HDFS_PATH), conf, "root");
+        fileSystem = FileSystem.get(new URI(HDFS_PATH), conf, HDFS_USER);
     }
 
     /**

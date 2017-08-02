@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>antin-hadoop-parent</artifactId>
@@ -12,16 +12,90 @@
     <artifactId>antin-storm</artifactId>
 
     <dependencies>
+        <!--zookeeper-->
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.4.6</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.storm</groupId>
             <artifactId>storm-core</artifactId>
-            <version>0.9.5</version>
-            <!--<version>1.1.0</version>-->
+            <!--<version>0.9.5</version>-->
+            <version>1.1.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>ring-cors</groupId>
+                    <artifactId>ring-cors</artifactId>
+                </exclusion>
+            </exclusions>
             <!--<scope>provided</scope>-->
         </dependency>
+        <!--hadoop-->
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-client</artifactId>
+            <version>2.7.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+            <version>2.7.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-hdfs</artifactId>
+            <version>2.7.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/ring-cors/ring-cors -->
+        <!--     <dependency>
+                 <groupId>ring-cors</groupId>
+                 <artifactId>ring-cors</artifactId>
+                 <version>0.1.5</version>
+             </dependency>-->
+        <!-- 日志文件管理包 -->
+        <!-- log start -->
+        <!--     <dependency>
+                 <groupId>log4j</groupId>
+                 <artifactId>log4j</artifactId>
+                 <version>1.2.17</version>
+             </dependency>
+             &lt;!&ndash; 格式化对象，方便输出日志 &ndash;&gt;
+             <dependency>
+                 <groupId>com.alibaba</groupId>
+                 <artifactId>fastjson</artifactId>
+                 <version>1.1.41</version>
+             </dependency>
+             <dependency>
+                 <groupId>org.slf4j</groupId>
+                 <artifactId>slf4j-api</artifactId>
+                 <version>1.7.7</version>
+             </dependency>
+             <dependency>
+                 <groupId>org.slf4j</groupId>
+                 <artifactId>slf4j-log4j12</artifactId>
+                 <version>1.7.7</version>
+             </dependency>-->
+        <!-- log end -->
     </dependencies>
 
+    <!--    <repositories>
+            <repository>
+                <id>central</id>
+                <name>*</name>
+                <url>https://mvnrepository.com/artifact/ring-cors/ring-cors</url>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+                <snapshots>
+                    <enabled>true</enabled>
+                </snapshots>
+            </repository>
+        </repositories>-->
+
     <build>
+        <finalName>antin-storm</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -48,9 +122,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
