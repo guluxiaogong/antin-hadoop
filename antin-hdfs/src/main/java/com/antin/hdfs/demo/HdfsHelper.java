@@ -21,6 +21,7 @@ public class HdfsHelper {
     //private static String HDFS_PATH = "hdfs://192.168.2.88:9000/";
     private static String HDFS_PATH = "hdfs://zoe-cluster/";
 
+
     static {
         conf = new Configuration();
 //        conf.set("mapreduce.framework.name", "yarn");
