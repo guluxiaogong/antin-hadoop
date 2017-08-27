@@ -18,8 +18,8 @@ public class HdfsHelper {
     private static FileSystem fileSystem;
     private static Configuration conf;
 
-    private static String HDFS_PATH = "hdfs://192.168.2.88:9000/";
-    //private static String HDFS_PATH = "hdfs://cluster1/";
+    //private static String HDFS_PATH = "hdfs://192.168.2.88:9000/";
+    private static String HDFS_PATH = "hdfs://zoe-cluster/";
 
     static {
         conf = new Configuration();
@@ -229,3 +229,17 @@ public class HdfsHelper {
         return fileSystem.delete(filePath, true);
     }
 }
+//192.168.14.82 zoe-001
+//        192.168.14.83 zoe-002
+//        192.168.14.84 zoe-003
+//        192.168.14.85 zoe-004
+//        192.168.14.86 zoe-005
+//        192.168.14.87 zoe-006
+//        192.168.14.88 zoe-007
+//        192.168.14.89 zoe-008
+//        192.168.14.90 zoe-009
+//        192.168.14.91 zoe-010
+//        192.168.14.92 zoe-011
+//        192.168.14.93 zoe-012
+//        192.168.14.94 zoe-013
+//        192.168.14.95 zoe-014

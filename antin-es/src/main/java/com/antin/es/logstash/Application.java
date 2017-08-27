@@ -10,8 +10,8 @@ public class Application {
     private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) throws Exception {
-        for (int i = 0; i < 10; i++) {
-            LOGGER.error("Info log [" + i + "].");
+        for (int i = 0; i < 1; i++) {
+            LOGGER.info("Info log [" + i + "].你好，中国");
             Thread.sleep(500);
         }
     }
